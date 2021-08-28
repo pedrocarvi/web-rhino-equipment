@@ -1,0 +1,217 @@
+// Footer
+
+footer {
+    width: 100vw;
+    height: 600px;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+  
+    .contactenos {
+      h3 {
+        margin-top: 30px;
+        color: red;
+      }
+  
+      .contactenos__formulario {
+        margin-top: 10px;
+        width: 25vw;
+        height: 400px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        justify-items: start;
+        align-items: center;
+  
+        .contactenos__formulario--inputNombre,
+        .contactenos__formulario--inputEmail {
+          background-color: black;
+          color: rgba(255, 255, 255, 1);
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          height: 40px;
+          margin-left: 5px;
+          width: 220px;
+        }
+  
+        .contactenos__formulario--selectNacionalidad {
+          margin-bottom: 60px;
+          position: relative;
+          left: 4px;
+  
+          label {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.9em;
+          }
+  
+          select {
+            background-color: black;
+            color: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            height: 28px;
+            margin-top: 10px;
+            margin-left: 5px;
+          }
+        }
+  
+        .contactenos__formulario--textarea {
+          background-color: black;
+          color: rgba(255, 255, 255, 1);
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          margin-top: 10px;
+          font-family: "Roboto", sans-serif;
+          width: 220px;
+          resize: none;
+          overflow-y: scroll;
+  
+          &::-webkit-scrollbar {
+            width: 10px;
+            background: black;
+          }
+  
+          &::-webkit-scrollbar-thumb {
+            background: red;
+            border-radius: 10px;
+          }
+        }
+  
+        .contactenos__formulario--inputReset,
+        .contactenos__formulario--inputSend {
+          width: 150px;
+          padding: 0.5rem;
+          background-color: red;
+          border: 1px solid black;
+          color: white;
+          font-size: 0.7em;
+          text-transform: uppercase;
+          font-weight: bold;
+          cursor: pointer;
+          position: relative;
+          top: 60px;
+  
+          &:hover {
+            background-color: rgb(255, 72, 40);
+          }
+        }
+      }
+    }
+  
+    // Sobre nosotros
+    .nosotros {
+      width: 25vw;
+      height: 400px;
+      margin-top: 30px;
+  
+      h3 {
+        color: red;
+        margin-bottom: 22px;
+      }
+  
+      p {
+        font-size: 0.9em;
+      }
+    }
+  
+    // Redes sociales
+    .connect {
+      width: 25vw;
+      height: 400px;
+      margin-top: 30px;
+  
+      h3 {
+        color: red;
+        margin-bottom: 22px;
+      }
+  
+      .connect_icons {
+        width: 18vw;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+  
+        img {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+  
+  // 768px
+  
+  @media screen and (max-width: 768px) {
+    footer {
+      height: 1000px;
+      background-color: black;
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      align-items: center;
+  
+      .contactenos {
+        height: 750px;
+  
+        h3 {
+          text-align: center;
+        }
+  
+        .contactenos__formulario {
+          width: 80vw;
+          margin: 0 auto;
+          justify-items: center;
+  
+          .contactenos__formulario--inputNombre,
+          .contactenos__formulario--inputEmail {
+            width: 60vw;
+          }
+  
+          .contactenos__formulario--textarea {
+            width: 60vw;
+          }
+  
+          .contactenos__formulario--inputReset,
+          .contactenos__formulario--inputSend {
+            top: 60px;
+          }
+        }
+      }
+  
+      .nosotros {
+        width: 80vw;
+        height: 60px;
+        margin-top: 40px;
+        justify-items: center;
+        position: relative;
+        top: -200px;
+  
+        h3 {
+          text-align: center;
+        }
+      }
+  
+      .connect {
+        width: 80vw;
+        height: 70px;
+        margin: 0 auto;
+        margin: 40px;
+        justify-items: center;
+        position: relative;
+        top: -150px;
+  
+        h3 {
+          text-align: center;
+        }
+  
+        .connect_icons {
+          width: 60vw;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-evenly;
+        }
+      }
+    }
+  }
+  

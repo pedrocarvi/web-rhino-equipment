@@ -1,0 +1,257 @@
+// Productos Principales
+
+.main__productos {
+    width: 65%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+      "c2rower bumpers"
+      "c2rower bumpers"
+      "c2rower racks"
+      "rings racks"
+      "rings dominadas"
+      "rings dominadas"
+      "assault assault"
+      "assault assault";
+    gap: 0.05em;
+    justify-content: center;
+    align-items: center;
+  
+
+    div.main__productos--estilo {
+      border-radius: 10px;
+      margin: 10px;
+      background-position: center;
+      background-size: cover;
+      opacity: 0.85;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      justify-self: center;
+  
+      &:hover {
+        opacity: 1;
+        transition: 0.6s;
+        transform: scale(1.03, 1.03);
+      }
+  
+      p {
+        color: white;
+        margin-bottom: 6vw;
+        text-transform: uppercase;
+      }
+  
+      button {
+        background-color: red;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        margin-top: 25px;
+        text-transform: uppercase;
+        font-weight: bold;
+  
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+
+    div.c2row {
+        grid-area: c2rower;
+        width: 35vw;
+        height: 350px;
+        background-image: url(../imagenes/rower_background2.jpg);
+    }
+
+    div.bumpers{
+        grid-area: bumpers;
+        width: 25vw;
+        height: 230px;
+        background-image: url(../imagenes/bumper_background.jpg);
+        margin-top: 16px;
+    }
+
+    div.racks{
+        grid-area: racks;
+        background-image: url(../imagenes/rack2_background.jpg);
+        width: 25vw;
+        height: 230px;
+    }
+
+    div.rings {
+        grid-area: rings;
+        background-image: url(../imagenes/rings_background.jpg);
+        width: 35vw;
+        height: 350px;
+    }
+
+    div.dominadas {
+        grid-area: dominadas;
+        width: 25vw;
+        height: 230px;
+        background-image: url(../imagenes/pullup1.jpg);
+
+        p {
+            color: black;
+        }
+    }
+
+    div.assaultbike {
+        grid-area: assault;
+        width: 97%;
+        height: 220px;
+        background-image: url(../imagenes/assaultbike1.jpg);
+
+        p {
+            color: black;
+        }
+    }
+  
+}
+
+.wodGen {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h4 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-bottom: 20px;
+  }
+  button {
+    width: 180px;
+    height: 40px;
+    color: white;
+    background-color: rgb(30, 30, 30);
+    text-transform: uppercase;
+    border: 1px solid rgb(30, 30, 30);
+    margin-bottom: 20px;
+    &:hover {
+      background: rgb(60, 60, 60);
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+  
+  
+  .randomWod {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    height: fit-content;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    #demo2 {
+      text-align: center;
+    }
+  }
+  
+
+}
+
+
+// Media Querys 
+
+// 1300px
+
+@media screen and (max-width: 1300px) {
+  
+  .main__productos {
+    width: 80vw; 
+  
+    div.rings , div.c2row {
+      width: 100%;
+      height: 300px;
+    }
+
+    div.bumpers , div.racks , div.dominadas {
+      width: 80%;
+      height: 185px;
+    }
+  }
+}
+
+// 1024px
+
+@media screen and (max-width: 1024px) {
+
+  .main__productos {
+    width: 80vw; 
+  
+    div.rings , div.c2row {
+      width: 40vw;
+    }
+
+    div.bumpers , div.racks , div.dominadas {
+      width: 40vw;
+    }
+  }
+}
+
+// 768px
+
+@media screen and (max-width: 768px) {
+  .main__productos {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "c2rower"
+      "rings"
+      "bumpers"
+      "racks"
+      "dominadas"
+      "assault";
+
+    div.rings , div.c2row , div.assaultbike {
+      width: 80vw;
+      height: 250px;
+      p {
+        margin-bottom: 50px;
+      }
+      button {
+        margin-top: 90px;
+      }
+    }
+
+    div.bumpers, div.dominadas,
+    div.racks {
+      width: 80vw;
+      height: 250px;
+      p {
+        margin-bottom: 50px;
+      }
+      button {
+        margin-top: 90px;
+      }
+    }
+
+    div.bumpers {
+      position: relative;
+      top: 5px;
+    }
+    div.racks {
+      position: relative;
+      top: 10px;
+    }
+
+    div.dominadas {
+      position: relative;
+      top: 15px;
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "header";
+@import "productos";
+@import "footer";
+@import "paginas";
+@import "compras";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  line-height: 1;
+  font-weight: 200;
+}
+
+/* Scrollbar */
+
+body::-webkit-scrollbar {
+  background-color: black;
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 10px;
+}
+

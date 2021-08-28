@@ -1,0 +1,556 @@
+// Paginas de compras
+
+// Titulos de las paginas...
+
+.mainCompras {
+  display: grid;
+
+  .mainCompras__imagenEncabezado {
+    width: 100vw;
+    height: 110px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    h2 {
+      margin-left: 8vw;
+      text-transform: uppercase;
+    }
+  }
+
+  .racks {
+    background-image: url(../imagenes/zeus_title.jpg);
+    h2 {
+      color: white;
+    }
+  }
+
+  .barbells {
+    background-image: url(../imagenes/barbells_title.jpg);
+    h2 {
+      color: white;
+    }
+  }
+
+  .bumpers {
+    background-image: url(../imagenes/bumper_background1.jpg);
+
+    h2 {
+      color: white;
+    }
+  }
+
+  .gymnastics {
+    background-image: url(../imagenes/gymnast_background.jpg);
+
+    h2 {
+      color: white;
+    }
+  }
+
+  .cardio {
+    background-image: url(../imagenes/cardio_background.jpg);
+
+    h2 {
+      color: white;
+    }
+  }
+
+  // Imagenes de las pags de compra
+
+  .mainCompras__imagenProductos {
+    width: 100vw;
+    margin-top: 40px;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 850px 800px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "div1 div2";
+    gap: 10px;
+    justify-content: center;
+
+    .mainCompras__imagenProductos--div1 {
+      img {
+        width: 825px;
+        height: 500px;
+        border-radius: 10px;
+        opacity: 0.8;
+        object-fit: cover;
+
+        &:hover {
+          opacity: 1;
+          transition: 0.4s;
+        }
+      }
+    }
+
+    .mainCompras__imagenProductos--div2 {
+      grid-area: div2;
+      display: grid;
+      grid-template-columns: 350px 350px;
+      grid-template-rows: 250px;
+      img {
+        width: 300px;
+        height: 242.5px;
+        border-radius: 10px;
+        opacity: 0.8;
+        object-fit: cover;
+        &:hover {
+          opacity: 1;
+          transition: 0.4s;
+        }
+      }
+    }
+  }
+
+  // Imagenes de las dominadas
+
+  .mainCompras__imagenProductos--dominadas {
+    width: 100vw;
+    margin-top: 40px;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 825px;
+      height: 500px;
+      border-radius: 10px;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+        transition: 0.4s;
+      }
+    }
+  }
+
+  // Imagenes de los bumpers
+
+  .mainCompras__imagenProductos--plates {
+    width: 100vw;
+    margin: 0;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "div1 div2"
+      "div3 div4";
+    gap: 10px;
+
+    .mainCompras__imagenProductos--div1 {
+      grid-area: div1;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    .mainCompras__imagenProductos--div2 {
+      grid-area: div2;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    .mainCompras__imagenProductos--div3 {
+      grid-area: div3;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    .mainCompras__imagenProductos--div4 {
+      grid-area: div4;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  // Display none del carousel
+
+  .mainCompras__carousel {
+    display: none;
+  }
+
+  // Descripcion de los productos de compra
+
+  .mainCompras__descripcionProducto {
+    width: 90vw;
+    height: max-content;
+    margin: 0 5vw;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 800px 800px;
+    grid-template-rows: 1fr;
+    gap: 40px;
+
+    .mainCompras__descripcionProducto--texto {
+      h3 {
+        text-align: left;
+        margin-bottom: 15px;
+      }
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: justify;
+        font-size: 0.9rem;
+      }
+    }
+
+    .mainCompras__descripcionProducto--especificaciones {
+      justify-self: center;
+      height: max-content;
+      h4 {
+        margin-bottom: 15px;
+      }
+      ul {
+        li {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  // Armado
+
+  .mainCompras__armado {
+    background-color: rgb(228, 228, 228);
+    width: 100vw;
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .mainCompras__armado--rack {
+    img {
+      width: 700px;
+      height: 380px;
+    }
+  }
+
+  .mainCompras__armado--assault {
+    img {
+      width: 570px;
+      height: 500px;
+    }
+  }
+
+  // Comprar
+
+  .mainCompras__comprar {
+    width: 30vw;
+    margin: 0 35vw;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    height: 200px;
+    border-radius: 6px;
+    background-color: rgb(238, 238, 238);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "titulo"
+      "precio"
+      "boton";
+
+    .mainCompras__comprar--titulo {
+      grid-area: titulo;
+      justify-self: center;
+      align-self: center;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .mainCompras__comprar--precio {
+      grid-area: precio;
+      justify-self: center;
+      align-self: center;
+      text-transform: uppercase;
+    }
+
+    .mainCompras__comprar--boton {
+      grid-area: boton;
+      align-self: center;
+      justify-self: center;
+
+      button {
+        width: 15vw;
+        height: 40px;
+        background-color: red;
+        border: 1px solid red;
+        border-radius: 6px;
+        color: white;
+        font-size: 1.1rem;
+
+        &:hover {
+          background-color: tomato;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// Media Querys
+
+@media screen and (max-width: 1300px) {
+  .mainCompras {
+    display: grid;
+
+    // Imagenes de las pags de compra
+
+    .mainCompras__imagenProductos {
+      grid-template-columns: 1fr;
+      grid-template-rows: 500px 242.5px;
+      grid-template-areas: "div1" "div2";
+
+      .mainCompras__imagenProductos--div1 {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 950px;
+          height: 500px;
+        }
+      }
+
+      .mainCompras__imagenProductos--div2 {
+        grid-template-columns: 350px 350px 350px;
+        grid-template-rows: 242.5px;
+        display: flex;
+        justify-content: space-evenly;
+        img {
+          width: 300px;
+          height: 242.5px;
+        }
+      }
+    }
+
+    // Imagenes de las dominadas
+
+    .mainCompras__imagenProductos--dominadas {
+      img {
+        width: 780px;
+        height: 420px;
+      }
+    }
+
+    // Descripcion de los productos de compra
+
+    .mainCompras__descripcionProducto {
+      width: 80vw;
+      margin: 0 10vw;
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: max-content max-content;
+      gap: 20px;
+
+      .mainCompras__descripcionProducto--texto {
+        h3 {
+          font-size: 2rem;
+          text-align: center;
+        }
+      }
+
+      .mainCompras__descripcionProducto--especificaciones {
+        justify-self: left;
+        ul {
+          li {
+            margin-left: 1.5vw;
+          }
+        }
+      }
+    }
+
+    .mainCompras__comprar {
+      width: 50vw;
+      margin: 20px 25vw;
+    }
+  }
+}
+
+// 1024px
+
+@media screen and (max-width: 1024px) {
+  .mainCompras {
+    display: grid;
+
+    // Imagenes de las pags de compra
+
+    .mainCompras__imagenProductos {
+      grid-template-rows: 450px 242.5px;
+
+      .mainCompras__imagenProductos--div1 {
+        img {
+          width: 800px;
+          height: 450px;
+        }
+      }
+
+      .mainCompras__imagenProductos--div2 {
+        grid-template-columns: 290px 290px 290px;
+        grid-template-rows: 200px;
+        justify-content: center;
+        gap: 20px;
+        img {
+          align-self: center;
+          width: 280px;
+          height: 200px;
+        }
+      }
+    }
+
+    .mainCompras__armado--barbell {
+      height: 300px;
+    }
+
+    .mainCompras__armado--assault {
+      height: 410px;
+      img {
+        height: 400px;
+        width: 450px;
+      }
+    }
+  }
+}
+
+//  800px
+
+@media screen and (max-width: 800px) {
+  .mainCompras {
+    display: grid;
+
+    // Imagenes de las pags de compra
+
+    .mainCompras__imagenProductos {
+      display: none;
+    }
+
+    .mainCompras__carousel {
+      display: block;
+
+      .carousel-inner {
+        height: 50vw;
+      }
+    }
+  
+    // Imagen dominadas
+    
+    .mainCompras__imagenProductos--dominadas {
+      img {
+        width: 95vw;
+        height: 350px;
+        margin: 0 auto;
+      }
+    }
+
+  }
+
+  .mainCompras__armado--rack {
+    img {
+      width: 480px;
+      height: 280px;
+    }
+  }
+
+  .mainCompras__armado--assault {
+    img {
+      width: 500px;
+      height: 400px;
+    }
+  }
+
+  .mainCompras__armado--barbell {
+    img {
+      height: 280px;
+    }
+  }
+}
+
+// 600px
+
+@media screen and (max-width: 600px) {
+  .mainCompras {
+
+    
+    .mainCompras__imagenProductos--dominadas {
+      img {
+        width: 95vw;
+        height: 300px;
+        margin: 0 auto;
+      }
+    }
+    .mainCompras__armado--rack {
+      img {
+        width: 420px;
+        height: 300px;
+      }
+    }
+
+    .mainCompras__armado--barbell {
+      height: 240px;
+      img {
+        height: 230px;
+      }
+    }
+
+    .mainCompras__comprar {
+      margin: 0 auto 30px auto;
+      width: 400px;
+    }
+  }
+}
+
+// 480px
+
+@media screen and (max-width: 480px) {
+  .mainCompras {
+
+    .mainCompras__imagenProductos--dominadas {
+      img {
+        width: 98vw;
+        margin: 0 auto 0 -.5vw;
+        height: 250px;
+      }
+    }
+
+    .mainCompras__armado--rack {
+      img {
+        width: 420px;
+        height: 260px;
+      }
+    }
+
+    .mainCompras__armado--barbell {
+      height: 200px;
+      img {
+        width: 98vw;
+        height: 190px;
+      }
+    }
+
+    .mainCompras__comprar {
+      width: 100vw;
+      margin: 0 auto 30px auto;
+
+      .mainCompras__comprar--boton {
+        button {
+          width: 50vw;
+        }
+      }
+    }
+  }
+}
