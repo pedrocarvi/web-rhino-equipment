@@ -2,7 +2,8 @@ header {
   width: 100vw;
   background-color: #151515;
   display: flex;
-  justify-content: space-evenly; }
+  justify-content: center;
+  gap: 6vw; }
   header #btn_menu {
     display: none; }
   header label {
@@ -22,8 +23,8 @@ header {
     justify-content: center;
     align-items: center; }
     header .header__logo img {
-      width: 35px;
-      height: 35px; }
+      width: 45px;
+      height: 45px; }
   header .header__search {
     height: 60px;
     display: flex;
@@ -32,45 +33,68 @@ header {
     header .header__search img {
       width: 20px;
       height: 20px; }
-    header .header__search .carrito {
-      width: 25px;
-      height: 25px;
-      position: relative;
-      left: 4vw; }
-  header .header__menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    text-transform: uppercase;
-    padding-left: 0.5rem;
-    margin-bottom: 0; }
-    header .header__menu ul li {
-      font-size: 0.93em;
-      position: relative;
-      top: 4px;
-      padding: 20px 25px; }
-      header .header__menu ul li:hover ul {
-        display: block; }
-      header .header__menu ul li a {
-        color: white;
-        text-decoration: none; }
-        header .header__menu ul li a:hover {
-          color: red; }
-      header .header__menu ul li ul {
-        position: absolute;
-        left: -1px;
-        display: none;
-        background-color: #151515;
-        color: white;
-        z-index: 60;
-        width: max-content;
-        border-radius: 5px;
-        height: max-content; }
-        header .header__menu ul li ul li {
-          font-size: 0.93em;
+  header .header__menu {
+    position: relative;
+    left: 30px; }
+    header .header__menu ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      text-transform: uppercase;
+      padding-left: 0.5rem;
+      margin-bottom: 0; }
+      header .header__menu ul li {
+        font-size: 0.93em;
+        position: relative;
+        padding: 20px 25px; }
+        header .header__menu ul li:hover ul {
           display: block; }
-          header .header__menu ul li ul li:hover {
+        header .header__menu ul li a {
+          color: white;
+          text-decoration: none; }
+          header .header__menu ul li a:hover {
             color: red; }
+        header .header__menu ul li ul {
+          position: absolute;
+          left: -1px;
+          display: none;
+          background-color: #151515;
+          color: white;
+          z-index: 60;
+          width: max-content;
+          border-radius: 5px;
+          height: max-content; }
+          header .header__menu ul li ul li {
+            font-size: 0.93em;
+            display: block; }
+            header .header__menu ul li ul li:hover {
+              color: red; }
+  header .dropdown {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    cursor: pointer; }
+    header .dropdown .imgCarrito {
+      width: 30px;
+      height: 30px; }
+    header .dropdown .btnsCarrito {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8%; }
+    header .dropdown #carrito {
+      width: 400px;
+      background-color: #1e1e1e;
+      color: white;
+      position: absolute !important;
+      left: -170px !important;
+      top: 15px !important; }
+      header .dropdown #carrito table {
+        color: white;
+        text-align: center;
+        font-size: 0.9rem;
+        border: none; }
 
 .main__titulo {
   width: 100vw;
