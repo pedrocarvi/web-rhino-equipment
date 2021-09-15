@@ -49,7 +49,7 @@ class Carrito {
         
         <td>  ${producto.precio} </td>
         
-        <td> <a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"> </a> </td>
+        <td> <a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}">  </a> </td>
         `;
         listaProductos.appendChild(row)
         this.guardarProductosLocalStorage(producto);
@@ -63,7 +63,7 @@ class Carrito {
         if(e.target.classList.contains('borrar-producto')) {
             e.target.parentElement.parentElement.remove();
             producto = e.target.parentElement.parentElement;
-            productoID = producto.querySelector('a').getAttribute('data-id');
+            productoID = producto.querySelector('.mainCompras__comprar a').getAttribute('data-id');
         }
         // LS
         this.eliminarProductoLocalStorage(productoID)
@@ -129,7 +129,7 @@ class Carrito {
         
         <td>  ${producto.precio} </td>
         
-        <td> <a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"> </a> </td>
+        <td> <a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}">  </a> </td>
         `;
         listaProductos.appendChild(row)
         })
@@ -153,7 +153,7 @@ class Carrito {
                 timer: 1000,
                 showConfirmButton: false
         })} else {
-            location.href = 'compra.html';
+            location.href = '../compra.html';
         }
     }
 
@@ -173,7 +173,7 @@ class Carrito {
 
         <td> ${producto.precio * producto.cantidad} </td>
         
-        <td> <a href="#" class="borrar-producto fas fa-times-circle" style="font-size: 28px" data-id="${producto.id}"> </a> </td>
+        <td> <a href="#" class="borrar-producto fas fa-times-circle" style="font-size: 28px" data-id="${producto.id}">  </a> </td>
         `;
         listaCompra.appendChild(row)
         });
@@ -187,19 +187,10 @@ class Carrito {
 
         productoLS = this.obtenerProductosLocalStorage();
         for (let i = 0; i < productoLS.length; i++){
-            let element = Number(productoLS[i].precio * productoLS[i].cantidad )
+            let element = Number(productoLS[i].precio)
             total = total + element;
         }
-        igv = parseFloat(total * 0.21).toFixed(2)
-        subtotal = parseFloat(total-igv).toFixed(2)
-
-        document.getElementById('subtotal').innerHTML = `$${subtotal}`
-        document.getElementById('igv').innerHTML = `$${igv}`
         document.getElementById('total').innerHTML = `$${total}`
     }
-
-
-    
-    
-
 }
+

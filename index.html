@@ -24,6 +24,7 @@
 
     <!-- Mi css -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/preloader.css">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="imagenes/logo.png" type="image/x-icon" />
@@ -33,6 +34,14 @@
 </head>
 
 <body>
+
+    <div class="containerPre" id="containerPre">
+        <img src="imagenes/logo.png" alt="logo" width="100">
+        <div class="preloader">
+            <p> </p>
+        </div>
+    </div>
+
     <!-- HEADER -->
     <header id="arriba" class="header">
         <!-- Menu responsive -->
@@ -129,8 +138,7 @@
             </div>
     </header>
 
-    <main>
-        <div class="lista-productos"></div>
+    <main id="lista-productos">
         <section class="main__titulo">
             <a href="#arriba">
                 <h1>Rhino Equipment</h1>
@@ -224,7 +232,7 @@
 
         <section class="wodGen" id="wodGen">
             <h4> Wod Generator </h4>
-            <button onclick="mostrarWods()"> Genera tu Wod </button>
+            <button id="botonWods"> Genera tu Wod </button>
             <div class="wodReveal">
                 <p id="demo1"></p>
                 <p id="demo2"></p>
@@ -300,11 +308,11 @@
     </footer>
 
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/carrito.js"></script>
     <script src="js/pedido.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/sweetalert2.min.js"></script>
 
 

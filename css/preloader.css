@@ -1,0 +1,60 @@
+.containerPre {
+    position: absolute;
+    background-color: rgb(20,20,20);
+    color: white;
+    width: 100vw;
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    z-index: 1000;
+}
+
+.preloader {
+    width: 350px;
+    height: 7px;
+    border-radius: 10px;
+    background-color: rgb(40,40,40);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.preoloader p {
+    margin: 0;
+    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.preloader::before {
+    content: "";
+    position: absolute;
+    background: red;
+    width: 0;
+    height: 7px;
+    border-radius: 10px;
+    animation: preloader 3s infinite;
+}
+
+@keyframes preloader {
+    90% {
+        width: 100%;
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+.cerrar {
+    transform: translateY(-100%);
+    transition: all 0.5s;
+}

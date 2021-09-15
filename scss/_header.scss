@@ -116,24 +116,29 @@ header {
       width: 30px;
       height: 30px;
     }
-    .btnsCarrito {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8%;
-    }
     #carrito {
       width: 400px;
       background-color: rgb(30, 30, 30);
       color: white;
       position: absolute !important;
-      left: -170px !important;
+      left: 0 !important;
       top: 15px !important;
       table {
         color: white;
         text-align: center;
         font-size: 0.9rem;
         border: none;
+      }
+      .btnsCarrito {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8%;
+      }
+      .borrar-producto{
+          font-size: 0.95rem;
+          text-decoration: none;
+          color: red;
       }
     }
   }
