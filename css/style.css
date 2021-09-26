@@ -3,7 +3,10 @@ header {
   background-color: #151515;
   display: flex;
   justify-content: center;
-  gap: 6vw; }
+  gap: 6vw;
+  position: sticky;
+  top: 0vh;
+  z-index: 10; }
   header #btn_menu {
     display: none; }
   header label {
@@ -25,17 +28,8 @@ header {
     header .header__logo img {
       width: 45px;
       height: 45px; }
-  header .header__search {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    cursor: pointer; }
-    header .header__search img {
-      width: 20px;
-      height: 20px; }
   header .header__menu {
-    position: relative;
-    left: 30px; }
+    position: relative; }
     header .header__menu ul {
       list-style: none;
       display: flex;
@@ -106,10 +100,7 @@ header {
   background-color: #151515;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: sticky;
-  top: 0vh;
-  z-index: 10; }
+  align-items: center; }
   .main__titulo a {
     text-decoration: none; }
   .main__titulo h1 {
@@ -152,7 +143,8 @@ header {
       header .header__menu ul {
         flex-direction: column;
         margin: 0;
-        margin-left: 10px; }
+        margin-left: 10px;
+        z-index: 60; }
         header .header__menu ul li {
           border-top: 1px solid rgba(255, 255, 255, 0.4); }
           header .header__menu ul li ul {
@@ -162,11 +154,11 @@ header {
             header .header__menu ul li ul li {
               border-left: 1px solid rgba(255, 255, 255, 0.4);
               border-top: 0; }
-    header .header__search {
+    header .dropdown {
       grid-area: search;
       justify-self: flex-end;
       position: relative;
-      left: -8vw; } }
+      left: -4vw; } }
 
 .main__productos {
   width: 65%;

@@ -6,7 +6,9 @@ header {
   display: flex;
   justify-content: center;
   gap: 6vw;
-
+  position: sticky;
+  top: 0vh;
+  z-index: 10;
 
   // Menu responsive
   #btn_menu {
@@ -40,23 +42,9 @@ header {
     }
   }
 
-  // Buscador
-  .header__search {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-
-    img {
-      width: 20px;
-      height: 20px;
-    }
-  }
-
   // Menu
   .header__menu {
     position: relative;
-    left: 30px;
     ul {
       list-style: none;
       display: flex;
@@ -153,9 +141,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  top: 0vh;
-  z-index: 10;
 
   a {
     text-decoration: none;
@@ -213,6 +198,7 @@ header {
         flex-direction: column;
         margin: 0;
         margin-left: 10px;
+        z-index: 60;
 
         li {
           border-top: 1px solid rgba(255, 255, 255, 0.4);
@@ -231,11 +217,11 @@ header {
       }
     }
 
-    .header__search {
+    .dropdown {
       grid-area: search;
       justify-self: flex-end;
       position: relative;
-      left: -8vw;
+      left: -4vw;
     }
   }
 }

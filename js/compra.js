@@ -6,8 +6,6 @@ const cliente = document.getElementById('cliente');
 const correo = document.getElementById('correo')
 
 
-cargarEventos();
-
 function cargarEventos() {
 
     // Agregar productos a la compra
@@ -22,6 +20,8 @@ function cargarEventos() {
     // Procesar compra
     procesarCompraBtn.addEventListener('click', procesarCompra);
 }
+cargarEventos();
+
 
 function procesarCompra(e) {
     e.preventDefault() 
@@ -47,7 +47,7 @@ function procesarCompra(e) {
         cargandoGif.style.display = 'block';
 
         const enviado = document.createElement('img');
-        enviado.src = '../img/mail.gif';
+        enviado.src = '../imagenes/mail.gif';
         enviado.style.display = 'block'
         enviado.width = '150';
 

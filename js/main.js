@@ -1,3 +1,5 @@
+// Preloader
+
 let container = document.getElementById('containerPre');
 
 setTimeout( () => {
@@ -6,7 +8,7 @@ setTimeout( () => {
 
 
 
-// Variables de wods
+// Objeto de wods
 const wods = [
   { type: "21-15-9", movements: "Bar muscle ups <br> Burpees" },
   {
@@ -60,31 +62,7 @@ $('#botonWods').on("click", () => {
     mostrarWods()
 })
 
-// const contenedorWods = document.querySelector(".contenedor-wods");
-
-// function mostrarWods() {
-//     wods.forEach ( (wod) => {
-
-//         let i = Math.floor(Math.random() * wods.length)
-
-//         const div = document.createElement('div')
-//         div.classList.add("randomWod")
-
-//         console.log(div)
-
-//         const type = document.createElement('p')
-//         type.classList.add('type')
-//         type.innerHTML = (wods[i].type)
-
-//         const movements = document.createElement('p')
-//         movements.classList.add('movements')
-//         movements.innerHTML = (wods[i].movements)
-
-//         div.appendChild(type)
-//         div.appendChild(movements)
-
-//         contenedorWods.appendChild(div)
-//     })
-// }
 
 
+
+// Numero de productos
